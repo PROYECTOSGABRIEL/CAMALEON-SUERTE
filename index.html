@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camaleón de la Suerte - ISMAC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🦎 El Camaleón de la Suerte</h1>
+        
+        <div class="status-container">
+            <div id="conexion-status">
+                <span class="online">✓ </span>
+                <span class="offline">✗ </span>
+            </div>
+            <div id="premios-restantes">Premios disponibles: 12</div>
+        </div>
+        
+        <button id="sortear-btn">¡Mostrar Ganadores!</button>
+        <button id="reset-btn" class="secondary">Reiniciar Sorteo</button>
+        
+        <div id="resultado" class="resultado-oculto"></div>
+        
+        <div class="qr-container">
+            <h3>Escanea para participar</h3>
+            <div id="qr-code"></div>
+        </div>
+        
+        <div class="ganadores-container">
+            <h3>Últimos Ganadores</h3>
+            <ul id="lista-ganadores"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
