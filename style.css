@@ -20,11 +20,11 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 h1 {
     color: var(--color-primary);
-    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -38,7 +38,6 @@ button {
     cursor: pointer;
     margin: 10px;
     transition: all 0.3s;
-    display: inline-block;
 }
 
 button.secondary {
@@ -50,15 +49,10 @@ button:hover {
     transform: translateY(-2px);
 }
 
-.status-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
 }
-
-#conexion-status .online { color: green; }
-#conexion-status .offline { color: red; }
-#conexion-status .offline { display: none; }
 
 #resultado {
     margin: 30px 0;
@@ -68,27 +62,34 @@ button:hover {
     min-height: 100px;
 }
 
-#lista-ganadores {
+#lista-premios-container {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f0f8ff;
+    border-radius: 10px;
+    text-align: left;
+}
+
+#lista-premios {
     list-style-type: none;
     padding: 0;
 }
 
-#lista-ganadores li {
+#lista-premios li {
     padding: 8px;
     border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
 }
 
-.qr-container {
-    margin: 30px auto;
-    text-align: center;
+.premio-asignado {
+    opacity: 0.6;
+    text-decoration: line-through;
 }
 
-#qr-code img {
-    width: 200px;
-    height: 200px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background: white;
+.premio-estado {
+    font-weight: bold;
+    color: #666;
 }
 
 .nota-premio-mayor {
